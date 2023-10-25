@@ -1,4 +1,6 @@
 # GeoLocation
+
+![GeoLocation+(1)_out](https://github.com/kenv0317/GeoLocation/assets/71165696/62dcf2d9-743c-4b61-b3bb-ce37ca4d1708)
 <!-- 
 モデルフィールド：https://qiita.com/okoppe8/items/a1149b2be54441951de1  
 get_object_or_404の書き方：https://itc.tokyo/django/get_object_or_404/  
