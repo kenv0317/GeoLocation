@@ -19,7 +19,8 @@ def calculate_distance_view(request):
 
     ip_ = get_ip_address(request)
     print(ip_)
-    ip = '184.169.245.154'
+    #ip = '184.169.245.154'
+    ip = '61.122.112.97'
     country, city, lat, lon = get_geo(ip)
 
     location = geolocator.geocode(city)
@@ -36,8 +37,15 @@ def calculate_distance_view(request):
 
     if form.is_valid():
         instance = form.save(commit=False)
+        first_place_ = form.cleaned_data.get('first_place')
         destination_ = form.cleaned_data.get('destination')
+        first_place = geolocator.geocode(first_place_)
         destination = geolocator.geocode(destination_)
+
+        # first_place coodination
+        l_lat = first_place.latitude
+        l_lon = first_place.longitude
+        pointA = (l_lat, l_lon)
 
         # destination coodination
         d_lat = destination.latitude
